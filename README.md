@@ -10,6 +10,12 @@ npm i ts-loader@9
 
 # react17をインストール 最初は17でok
 npm i react@17 react-dom@17 @types/react@17 @types/react-dom@17
+
+# これを入れる事で、リアルタイムで編集が反映される
+npm i webpack-dev-server@3
+
+# reactのcss管理
+npm i styled-components@5 @types/styled-components@5
 ```
 
 # 参考
