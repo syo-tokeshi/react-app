@@ -7,6 +7,8 @@ npm install webpack@5 webpack-cli@4
 npm i typescript@4
 # webpack でビルドする際に TypeScript のビルドも同時に行うためのもの  
 npm i ts-loader@9
+
+
 ```
 
 # 参考
