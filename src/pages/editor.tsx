@@ -1,9 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import {useState} from "react";
-
+const StorageKey = "pages/editor:text"
 export const Editor: React.FC = ()=> {
-  const [text,setText] = useState<string>("")
+  // const [text,setText] = useState<string>("")
+  const [text,setText] = useState<string>(localStorage.getItem(StorageKey) || "")
   return (
       <>
         <Header>
@@ -12,7 +13,10 @@ export const Editor: React.FC = ()=> {
         <Wrapper>
           <TextArea
               onChange={(event) => {
-                setText(event.target.value)
+                // setText(event.target.value)
+                  const chagedtext = event.target.value
+                  localStorage.setItem(StorageKey,chagedtext)
+                  setText(chagedtext)
               }}
               value={text}
           />
