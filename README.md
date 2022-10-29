@@ -24,3 +24,9 @@ npm i styled-components@5 @types/styled-components@5
 環境構築まとめ
 (React, Vue.js, Three.jsのサンプル付き)  
 https://ics.media/entry/16329/
+
+# 感想
+
+vueみたいに普通にコンポーネントをを作って作成すれば良いだけ  
+styled-componentsの補完がめんどくさかった  
+vscode 補完 styled-components 補完  とかで調べたら解決した  

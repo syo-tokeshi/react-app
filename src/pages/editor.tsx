@@ -1,5 +1,26 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import {useState} from "react";
+
+export const Editor: React.FC = ()=> {
+  const [text,setText] = useState<string>("")
+  return (
+      <>
+        <Header>
+          Markdown Editor
+        </Header>
+        <Wrapper>
+          <TextArea
+              onChange={(event) => {
+                setText(event.target.value)
+              }}
+              value={text}
+          />
+          <Preview>プレビューエリア</Preview>
+        </Wrapper>
+      </>
+  )
+}
 
 const Header = styled.header`
   font-size: 1.5rem;
@@ -42,17 +63,3 @@ const Preview = styled.div`
   top: 0;
   width: 50vw;
 `
-
-  export const Editor: React.FC = ()=> {
-    return (
-      <>
-      <Header>
-        Markdown Editor
-      </Header>
-      <Wrapper>
-        <TextArea value="入力" />
-        <Preview>プレビュー</Preview>
-      </Wrapper>
-      </>
-      )
-  }
