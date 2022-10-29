@@ -8,7 +8,8 @@ npm i typescript@4
 # webpack でビルドする際に TypeScript のビルドも同時に行うためのもの  
 npm i ts-loader@9
 
-
+# react17をインストール 最初は17でok
+npm i react@17 react-dom@17 @types/react@17 @types/react-dom@17
 ```
 
 # 参考
