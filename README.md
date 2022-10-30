@@ -16,6 +16,9 @@ npm i webpack-dev-server@3
 
 # reactのcss管理
 npm i styled-components@5 @types/styled-components@5
+
+# マークダウンをhtmlに変換する
+npm i react-markdown@6
 ```
 
 # 参考
