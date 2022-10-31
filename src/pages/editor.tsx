@@ -6,14 +6,12 @@ import { putMemo } from '../indexeddb/memos'
 import { Button } from '../components/button'
 import {SaveModal} from "../components/save_modal";
 import {useState} from "react";
+import {Link} from "react-router-dom";
+
 
 const StorageKey = "pages/editor:text"
 export const Editor: React.FC = ()=> {
   const [text,setText] = useStateWithStorage("",StorageKey)
-    //
-    // const saveMemo = (): void => {
-    //     putMemo('TITLE', text)
-    // }
 
     const [showModal, setShowModal] = useState(false)
 
@@ -22,10 +20,16 @@ export const Editor: React.FC = ()=> {
         <Header>
           Markdown Editor
             <HeaderControl>
-                {/*<Button onClick={saveMemo}>*/}
                 <Button onClick={() => setShowModal(true)}>
-                    12
+                    保存する
                 </Button>
+                <Link to="/history">
+                    履歴を見る
+                </Link>
+                <p></p>
+                <Link to="/neko">
+                    猫ちゃん
+                </Link>
             </HeaderControl>
         </Header>
         <Wrapper>
