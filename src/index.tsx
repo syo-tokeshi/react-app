@@ -3,6 +3,7 @@ import {render} from "react-dom";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { Editor } from './pages/editor';
+import {History} from "./pages/history";
 import {
   HashRouter as Router,
   Switch,
@@ -25,7 +26,7 @@ const Main = (
       <Editor/>
     </Route>
     <Route exact path="/history">
-      <h1>history</h1>
+      <History/>
     </Route>
     <Route exact path="/neko">
       <h1>neko</h1>
