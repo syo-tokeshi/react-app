@@ -19,6 +19,9 @@ npm i styled-components@5 @types/styled-components@5
 
 # マークダウンをhtmlに変換する
 npm i react-markdown@6
+
+# routerを導入
+npm i react-router-dom@5 @types/react-router-dom@5
 ```
 
 # 参考

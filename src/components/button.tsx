@@ -20,7 +20,7 @@ const StyledButton = styled.button`
 
 interface Props {
     cancel?: boolean
-    children: string
+    children?: React.ReactNode
     onClick: () => void
 }
 

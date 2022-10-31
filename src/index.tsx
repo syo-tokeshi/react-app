@@ -3,6 +3,12 @@ import {render} from "react-dom";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { Editor } from './pages/editor';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom'
 
 const Globalstyle = createGlobalStyle`
   body * { 
@@ -13,7 +19,19 @@ const Globalstyle = createGlobalStyle`
 const Main = (
 <>
   <Globalstyle/>
-  <Editor/>
+  {/*<Editor/>*/}
+  <Router>
+    <Route exact path="/editor">
+      <Editor/>
+    </Route>
+    <Route exact path="/history">
+      <h1>history</h1>
+    </Route>
+    <Route exact path="/neko">
+      <h1>neko</h1>
+    </Route>
+    <Redirect to="/editor" path="*" />
+  </Router>
 </>)
 render(Main,document.getElementById("app"))
 
