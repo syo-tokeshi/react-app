@@ -72,7 +72,7 @@ export const Editor: React.FC = () => {
           value={text}
         />
         <Preview>
-          プレビューエリア
+          <ReactMarkdown>{text}</ReactMarkdown>
         </Preview>
       </Wrapper>
       {showModal && (
