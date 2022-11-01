@@ -29,7 +29,7 @@ const Main = (
       <History/>
     </Route>
     <Route exact path="/neko">
-      <h1>neko</h1>
+      <h1>テスト</h1>
     </Route>
     <Redirect to="/editor" path="*" />
   </Router>
